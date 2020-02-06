@@ -24,3 +24,18 @@ let salarios = [{
 
     }
 ]
+
+let getUserById = (id, callback) => {
+    // por el find añade el empleado , no fue definido auto
+    let empleadoDB = empleados.find(empleado => empleado.id === id);
+    console.log(empleadoDB)
+    if (!empleadoDB) {
+        callback(`No existe un empleado con el${id}`)
+    } else {
+        callback(null, empleadoDB)
+    }
+
+
+}
+
+getUserById(30)
