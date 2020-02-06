@@ -12,7 +12,9 @@ let crearArchivo = (base) => {
             }
 
             fs.writeFile(`tabla-${base}`, data, (err) => {
-                if (err) throw err;
+                if (err) reject(err);
+                else
+                    resolve(`tabla-${base}.txt`)
                 console.log('The file has been created');
             });
 
@@ -21,3 +23,7 @@ let crearArchivo = (base) => {
 
     }
     // fs.writeFile(file,data[options],callback)
+
+module.exports = {
+    crearArchivo // no es necesario dos veces solo con una
+}
