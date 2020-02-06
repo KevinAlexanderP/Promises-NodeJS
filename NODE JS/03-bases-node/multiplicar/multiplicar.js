@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-
+// modulo.exports.CA
 
 let crearArchivo = (base) => {
 
